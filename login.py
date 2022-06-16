@@ -23,9 +23,7 @@ class MainApp(MDApp):
     def logger(self):
         x = functions.logIn(self.root.ids.user.text,self.root.ids.password.text)
         if x == 1:
-            self.root.current ="screen2"
-        else:
-            self.root.ids.welcome_label.text = "Alias/Password provided was incorrect"
+            self.root.current ="landing"
 
         return Builder.load_file('login.kv')
 

@@ -9,6 +9,8 @@
             padding: 25
             spacing: 25
             orientation: 'vertical'
+            Image:
+                source: 'Resources/sf.png'
 
             MDLabel:
                 id: welcome_label
@@ -49,6 +51,46 @@
                 font_size: 20
                 pos_hint: {"center_x": 0.5}
     Screen:
-        name: "screen2"
+        name: "landing"
+        MDCard:
+            size_hint: None, None
+            size: 600, 700
+            pos_hint: {"center_x":0.5, "center_y":0.5}
+            elevation: 20
+            padding: 25
+            spacing: 25
+            orientation: 'vertical'
+
+            MDLabel:
+                id: welcome_label
+                text: "Hey good neighbors!"
+                halign: 'center'
+                size_hint_y: None
+                font_size: 65
+                height: self.texture_size[1]
+                padding_y: 15
+                color: (1,0,0,1)
+                bold: True
+
+            MDLabel:
+                id: welcome_label
+                text: "This is a safe space for you to seek mental health guidance. We can set you up with a counselor that best fits your needs. Just answer a few questions from the chatbot below and we will recommend a counselor with whom you can schedule a virtual appointment."
+                halign: 'center'
+                size_hint_y: None
+                font_size: 30
+                height: self.texture_size[1]
+                padding_y: 15
+                color: (1,0,0,1)
+
+            MDRoundFlatButton:
+                text: "Chatbot"
+                font_size: 30
+                pos_hint: {"center_x": 0.5}
+                text_color: (1,0,0,1)
+                line_color: (1,0,0,1)
+
+            Widget:
+                size_hint_y: None
+                height: 30
     Screen:
         name: "screen3"
