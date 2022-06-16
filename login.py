@@ -14,6 +14,8 @@ class UI(ScreenManager):
     pass
 
 class MainApp(MDApp):
+
+
     def build(self):
         self.theme_cls.theme_style = "Light"
         self.theme_cls.primary_palette = "Red"
@@ -26,5 +28,13 @@ class MainApp(MDApp):
             self.root.current ="landing"
         else:
             self.root.ids.welcome_label.text = "Alias/Password is incorrect"
+    
+    def selected(self,problem):
+        global s
+        s = functions.find(problem)
+        functions.save(s)
+        self.root.current = "appointment"   
+        self.root.ids.pair.text ="Dr. "+s+" seems to be the best match for your situation, would you care to schedule an appointment?"
+        
 
 MainApp().run()
