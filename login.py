@@ -4,6 +4,11 @@ import functions
 from kivy.lang import Builder
 from kivymd.app import MDApp
 from kivy.uix.screenmanager import ScreenManager
+from kivy.app import App
+from kivy.uix.widget import Widget
+from kivy.uix.image import Image
+from kivy.core.window import Window
+from kivy.properties import ObjectProperty
 
 class UI(ScreenManager):
     pass
@@ -21,5 +26,7 @@ class MainApp(MDApp):
             self.root.current ="screen2"
         else:
             self.root.ids.welcome_label.text = "Alias/Password provided was incorrect"
+
+        return Builder.load_file('login.kv')
 
 MainApp().run()

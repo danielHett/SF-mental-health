@@ -8,6 +8,8 @@ Screen:
         padding: 25
         spacing: 25
         orientation: 'vertical'
+        Image:
+            source: 'Resources/sf.png'
 
         MDLabel:
             id: welcome_label
@@ -17,6 +19,9 @@ Screen:
             font_size: 65
             height: self.texture_size[1]
             padding_y: 15
+            # Text Properties
+            color: (1,0,0,1)
+            bold: True
 
         MDTextFieldRound:
             id: user
