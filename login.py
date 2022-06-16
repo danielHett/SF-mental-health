@@ -24,7 +24,7 @@ class MainApp(MDApp):
         x = functions.logIn(self.root.ids.user.text,self.root.ids.password.text)
         if x == 1:
             self.root.current ="landing"
-
-        return Builder.load_file('login.kv')
+        else:
+            self.root.ids.welcome_label.text = "Alias/Password is incorrect"
 
 MainApp().run()
