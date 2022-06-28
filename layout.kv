@@ -88,14 +88,14 @@
                 pos_hint: {"center_x": 0.5}
                 text_color: (1,0,0,1)
                 line_color: (1,0,0,1)
-                on_press: root.current = 'survey'
+                on_press: root.current = 'survey1'
 
 
             Widget:
                 size_hint_y: None
                 height: 30
     Screen:
-        name: "survey"
+        name: "survey1"
         MDCard:
             size_hint: None, None
             size: 600, 700
@@ -104,6 +104,116 @@
             padding: 25
             spacing: 25
             orientation: 'vertical'
+            Image:
+                source: 'Resources/image001.jpg'
+
+            MDLabel:
+                id: question
+                text: "How much sleep do you get per day?"
+                halign: 'center'
+                size_hint_y: None
+                font_size: 30
+                height: self.texture_size[1]
+                padding_y: 15
+                color: (1,0,0,1)
+
+            MDRoundFlatButton:
+                text: "none - 3 hours"
+                font_size: 20
+                pos_hint: {"center_x": 0.5}
+                text_color: (1,0,0,1)
+                line_color: (1,0,0,1)
+                on_press: root.current = 'survey2'
+            
+            MDRoundFlatButton:
+                text: "4-5 hours"
+                font_size: 20
+                pos_hint: {"center_x": 0.5}
+                text_color: (1,0,0,1)
+                line_color: (1,0,0,1)
+                on_press: root.current = 'survey2'
+            
+            MDRoundFlatButton:
+                text: "6-7 hours"
+                font_size: 20
+                pos_hint: {"center_x": 0.5}
+                text_color: (1,0,0,1)
+                line_color: (1,0,0,1)
+                on_press: root.current = 'survey2'
+
+            MDRoundFlatButton:
+                text: "8 or more"
+                font_size: 20
+                pos_hint: {"center_x": 0.5}
+                text_color: (1,0,0,1)
+                line_color: (1,0,0,1)
+                on_press: root.current = 'survey2'
+    Screen:
+        name: "survey2"
+        MDCard:
+            size_hint: None, None
+            size: 600, 700
+            pos_hint: {"center_x":0.5, "center_y":0.5}
+            elevation: 20
+            padding: 25
+            spacing: 25
+            orientation: 'vertical'
+            Image:
+                source: 'Resources/image002.jpg'
+
+            MDLabel:
+                id: question
+                text: "Would you feel more comfortable talking to a professional who is:"
+                halign: 'center'
+                size_hint_y: None
+                font_size: 30
+                height: self.texture_size[1]
+                padding_y: 15
+                color: (1,0,0,1)
+
+            MDRoundFlatButton:
+                text: "Female"
+                font_size: 20
+                pos_hint: {"center_x": 0.5}
+                text_color: (1,0,0,1)
+                line_color: (1,0,0,1)
+                on_press: root.current = 'survey3'
+            
+            MDRoundFlatButton:
+                text: "Male"
+                font_size: 20
+                pos_hint: {"center_x": 0.5}
+                text_color: (1,0,0,1)
+                line_color: (1,0,0,1)
+                on_press: root.current = 'survey3'
+            
+            MDRoundFlatButton:
+                text: "Non-Binary"
+                font_size: 20
+                pos_hint: {"center_x": 0.5}
+                text_color: (1,0,0,1)
+                line_color: (1,0,0,1)
+                on_press: root.current = 'survey3'
+
+            MDRoundFlatButton:
+                text: "No Preference"
+                font_size: 20
+                pos_hint: {"center_x": 0.5}
+                text_color: (1,0,0,1)
+                line_color: (1,0,0,1)
+                on_press: root.current = 'survey3'
+    Screen:
+        name: "survey3"
+        MDCard:
+            size_hint: None, None
+            size: 600, 700
+            pos_hint: {"center_x":0.5, "center_y":0.5}
+            elevation: 20
+            padding: 25
+            spacing: 25
+            orientation: 'vertical'
+            Image:
+                source: 'Resources/image003.jpg'
 
             MDLabel:
                 id: question
